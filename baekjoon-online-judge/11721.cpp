@@ -6,31 +6,38 @@
 #include <cstring>
 #include <string>
 #include <iostream>
+#include <cstdio>
 
 using namespace std;
+//
+//int main() {
+//    char word[101];
+//    scanf("%s", word);
+//
+//    int count = 0;
+//    int totalCount = 0;
+//    string tempWord;
+//    while (totalCount < strlen(word)) {
+//
+//        tempWord += word[totalCount];
+//
+//        totalCount++;
+//        count++;
+//
+//        if(count == 10){
+//            cout << tempWord << endl;
+//            tempWord = "";
+//            count = 0;
+//        }
+//
+//    }
+//    cout << tempWord << endl;
+//}
 
 int main() {
-    char word[101];
-    scanf("%s", word);
-
-    int count = 0;
-    int totalCount = 0;
-    string tempWord;
-    while (totalCount < strlen(word)) {
-
-        tempWord += word[totalCount];
-
-        totalCount++;
-        count++;
-
-        if(count == 10){
-            cout << tempWord << endl;
-            tempWord = "";
-            count = 0;
-        }
-
+    char a[100];
+    while (scanf("%10s", a) == 1){
+        printf("%s\n",a);
     }
-
-    cout << tempWord << endl;
-
+    return 0;
 }

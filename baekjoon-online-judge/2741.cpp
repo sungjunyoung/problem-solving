@@ -1,0 +1,14 @@
+//
+// Created by 성준영 on 2017. 4. 10..
+//
+
+#include <cstdio>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        printf("%d\n", i);
+    }
+}

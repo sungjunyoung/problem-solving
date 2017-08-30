@@ -1,4 +1,4 @@
 cmake-build-debug/
-CMakeLists.txt
+baekjoon-online-judge/CMakeLists.txt
 .idea/
 .DS_Store

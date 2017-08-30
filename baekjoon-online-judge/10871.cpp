@@ -1,29 +1,20 @@
 //
-// Created by 성준영 on 2017. 4. 12..
+// Created by 성준영 on 2017. 7. 13..
 //
 
-#include <stdio.h>
 #include <iostream>
-#include <string>
+
 using namespace std;
 
 int main() {
     int n, x;
     cin >> n >> x;
 
-    int list[10001];
-
     for (int i = 1; i <= n; i++) {
-        cin >> list[i];
-    }
-
-    string result = "";
-    for(int i = 1; i<= n; i++){
-        if(list[i] < x){
-            result += std::to_string(list[i]);
-            result += ' ';
+        int test;
+        cin >> test;
+        if(test < x){
+            cout << test << " ";
         }
     }
-
-    cout << result << endl;
 }

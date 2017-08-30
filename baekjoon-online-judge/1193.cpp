@@ -1,45 +1,39 @@
+//
+// Created by 성준영 on 2017. 7. 02..
+//
+
+
 #include <iostream>
 
 using namespace std;
 
 int main() {
-    int x;
-    cin >> x;
+    int n;
+    cin >> n;
 
-    int flag = 0;
-    int pre_flag = 0;
-    int i = 0;
-    int j = -1;
-    while (flag < x) {
-        i++;
-        j++;
-        flag += i;
-        pre_flag += j;
+    int iter = 1;
+    int adder = 1;
+    int counter = 0;
+    // 한 묶음에서 1,2,3,4 씩 늘려지므로
+    while (iter <= n) {
+        iter += adder;
+        adder += 1;
+        counter++;
     }
+    // 한번 더 돈거 뺴주기
+    iter -= adder - 1;
+    int sub = n - iter;
 
-    int term = flag - pre_flag;
-    int counter = x - pre_flag;
-
-
-    if (term % 2 == 1) {
-        int r_1 = term;
-        int r_2 = 1;
-        for (int k = 0; k < counter; k++) {
-            if (k == counter - 1) {
-                cout << r_1 - k << "/" << r_2 + k << endl;
-            }
-
-        }
+    int up, down;
+    // 짝수 / 홀수
+    if(counter%2 == 0){
+        up = 1 + sub;
+        down = counter - sub;
+        cout << up << "/" << down << endl;
     } else {
-
-        int r_1 = 1;
-        int r_2 = term;
-        for (int k = 0; k < counter; k++) {
-            if (k == counter - 1) {
-                cout << r_1 + k << "/" << r_2 - k << endl;
-            }
-
-        }
+        down = 1 + sub;
+        up = counter - sub;
+        cout << up << "/" << down << endl;
     }
 
 

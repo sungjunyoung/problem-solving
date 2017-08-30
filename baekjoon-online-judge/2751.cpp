@@ -1,28 +1,25 @@
-//
-// Created by 성준영 on 2017. 4. 27..
-//
-
 #include <iostream>
 #include <vector>
+#include <stdio.h>
 #include <algorithm>
 
 using namespace std;
 
+// 직접구현해보고싶다..
 int main() {
     int n;
     cin >> n;
-    vector<int> a;
+
+    vector<int> numList;
     for (int i = 1; i <= n; i++) {
-        int x;
-        cin >> x;
-        a.push_back(x);
+        int tempNum;
+        scanf("%d",&tempNum);
+        numList.push_back(tempNum);
     }
 
-    sort(a.begin(), a.end());
+    sort(numList.begin(), numList.end());
 
     for (int i = 0; i < n; i++) {
-        cout << a[i] << endl;
+        printf("%d\n", numList[i]);
     }
 }
-
-//TODO 미해결

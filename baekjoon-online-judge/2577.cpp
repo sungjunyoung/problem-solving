@@ -1,30 +1,25 @@
 //
-// Created by 성준영 on 2017. 4. 12..
+// Created by 성준영 on 2017. 7. 13..
 //
-
 #include <iostream>
 
 using namespace std;
 
 int main() {
-    int a, b, c;
+    int A, B, C;
+    cin >> A >> B >> C;
 
-    cin >> a >> b >> c;
-
-    int mul = a * b * c;
-
-    int countList[10];
-    for (int i = 0; i <= 9; i++) {
-        countList[i] = 0;
-    }
+    // 곱셈 결과
+    int mul = A * B * C;
+    int result[10] = {0};
 
     while (mul != 0) {
-        int temp = mul % 10;
-        countList[temp]++;
+        int num = mul % 10;
+        result[num]++;
         mul = mul / 10;
     }
 
-    for (int i = 0; i <= 9; i++) {
-        cout << countList[i] << endl;
+    for (int i = 0; i < 10; i++) {
+        cout << result[i] << endl;
     }
 }
